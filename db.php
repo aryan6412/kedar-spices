@@ -13,32 +13,33 @@ $options = [
 ];
 
 $pdo = null;
-
-// Attempt connection with 'root' or 'Aryan' username
-$usernames = ['root', 'Aryan'];
-$connection_error = '';
-
-foreach ($usernames as $username) {
-    try {
-        $dsn = "mysql:host=$host;port=$port;charset=$charset";
-        $pdo = new PDO($dsn, $username, $pass, $options);
-        break; // Stop loop if successful
-    } catch (\PDOException $e) {
-        $connection_error = $e->getMessage();
-    }
-}
-
 $is_sqlite = false;
 
-if (!$pdo) {
-    try {
-        $sqlite_file = sys_get_temp_dir() . '/kedar_spices.sqlite';
-        $pdo = new PDO("sqlite:" . $sqlite_file);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-        $is_sqlite = true;
-    } catch (\Throwable $e) {
-        $pdo = null;
+if (class_exists('PDO')) {
+    // Attempt connection with 'root' or 'Aryan' username
+    $usernames = ['root', 'Aryan'];
+    $connection_error = '';
+
+    foreach ($usernames as $username) {
+        try {
+            $dsn = "mysql:host=$host;port=$port;charset=$charset";
+            $pdo = new PDO($dsn, $username, $pass, $options);
+            break; // Stop loop if successful
+        } catch (\Throwable $e) {
+            $connection_error = $e->getMessage();
+        }
+    }
+
+    if (!$pdo && in_array('sqlite', PDO::getAvailableDrivers())) {
+        try {
+            $sqlite_file = sys_get_temp_dir() . '/kedar_spices.sqlite';
+            $pdo = new PDO("sqlite:" . $sqlite_file);
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+            $is_sqlite = true;
+        } catch (\Throwable $e) {
+            $pdo = null;
+        }
     }
 }
 
