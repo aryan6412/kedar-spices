@@ -13,47 +13,29 @@ $options = [
 ];
 
 $pdo = null;
-$is_sqlite = false;
 
-if (class_exists('PDO')) {
-    // Attempt connection with 'root' or 'Aryan' username
-    $usernames = ['root', 'Aryan'];
-    $connection_error = '';
+// Attempt connection with 'root' or 'Aryan' username
+$usernames = ['root', 'Aryan'];
+$connection_error = '';
 
-    foreach ($usernames as $username) {
-        try {
-            $dsn = "mysql:host=$host;port=$port;charset=$charset";
-            $pdo = new PDO($dsn, $username, $pass, $options);
-            break; // Stop loop if successful
-        } catch (\Throwable $e) {
-            $connection_error = $e->getMessage();
-        }
+foreach ($usernames as $username) {
+    try {
+        $dsn = "mysql:host=$host;port=$port;charset=$charset";
+        $pdo = new PDO($dsn, $username, $pass, $options);
+        break; // Stop loop if successful
+    } catch (\PDOException $e) {
+        $connection_error = $e->getMessage();
     }
+}
 
-    if (!$pdo && in_array('sqlite', PDO::getAvailableDrivers())) {
-        try {
-            $sqlite_file = sys_get_temp_dir() . '/kedar_spices.sqlite';
-            $pdo = new PDO("sqlite:" . $sqlite_file);
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-            $is_sqlite = true;
-        } catch (\Throwable $e) {
-            $pdo = null;
-        }
-    }
+if (!$pdo) {
+    die("Database connection failed for both root and Aryan. Error: " . $connection_error);
 }
 
 // Bootstrap Database and Tables
-if ($pdo) {
-    try {
-        if (!$is_sqlite) {
-            $pdo->exec("CREATE DATABASE IF NOT EXISTS `$db` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
-            $pdo->exec("USE `$db`");
-        }
-    } catch (\Throwable $e) {
-        // Silently continue if database creation fails
-    }
-}
+try {
+    $pdo->exec("CREATE DATABASE IF NOT EXISTS `$db` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
+    $pdo->exec("USE `$db`");
     
     // Check if table needs upgrade
     $table_check = $pdo->query("SHOW TABLES LIKE 'hero_config'");
@@ -427,8 +409,8 @@ if ($pdo) {
             $ins_testi->execute([$t['name'], $t['role'], $t['location'], $t['avatar'], $t['badge_type'], $t['rating'], $t['comment']]);
         }
     }
-} catch (\Throwable $e) {
-    $pdo = null;
+} catch (\PDOException $e) {
+    die("Database initialization failed: " . $e->getMessage());
 }
 
 /**
