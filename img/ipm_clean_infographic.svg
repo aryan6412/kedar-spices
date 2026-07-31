@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 680" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F2F7F4" />
+    </linearGradient>
+
+    <linearGradient id="treeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2E5E43" />
+      <stop offset="50%" stop-color="#27AE60" />
+      <stop offset="100%" stop-color="#81C784" />
+    </linearGradient>
+
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F39C12" />
+      <stop offset="100%" stop-color="#E0A838" />
+    </linearGradient>
+
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#1C2C23" flood-opacity="0.08"/>
+    </filter>
+
+    <filter id="badgeShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#27AE60" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Poster Background Frame -->
+  <rect width="900" height="680" rx="32" fill="url(#bgGrad)" stroke="#27AE60" stroke-width="3" stroke-opacity="0.25" />
+
+  <!-- TOP BANNER HEADER -->
+  <g transform="translate(48, 48)">
+    <rect x="0" y="0" width="220" height="32" rx="16" fill="#27AE60" fill-opacity="0.12" />
+    <text x="16" y="21" font-family="'Outfit', system-ui, sans-serif" font-size="12" font-weight="800" fill="#27AE60" letter-spacing="1.5">IPM ECOSYSTEM SYSTEM</text>
+
+    <text x="0" y="70" font-family="'Playfair Display', Georgia, serif" font-size="38" font-weight="700" fill="#1C2C23">What is IPM?</text>
+
+    <text x="0" y="98" font-family="'Outfit', system-ui, sans-serif" font-size="14" font-weight="500" fill="#1C2C23" opacity="0.75">
+      Integrated Pest Management — A science-based ecosystem strategy.
+    </text>
+  </g>
+
+  <!-- TOP RIGHT BRAND LOGO BADGE -->
+  <g transform="translate(740, 42)">
+    <rect width="110" height="42" rx="12" fill="#FFFFFF" stroke="#27AE60" stroke-width="1.5" stroke-opacity="0.3" filter="url(#shadow)"/>
+    <text x="22" y="26" font-family="'Playfair Display', Georgia, serif" font-size="16" font-weight="800" fill="#27AE60">P J M</text>
+    <text x="18" y="36" font-family="'Outfit', sans-serif" font-size="7" font-weight="700" fill="#1C2C23" opacity="0.6">ORGANIC SYSTEM</text>
+  </g>
+
+  <!-- CENTRAL ECO-TREE ILLUSTRATION -->
+  <g transform="translate(450, 340)">
+    <!-- Tree Trunk -->
+    <path d="M-14 80 C-12 20, -18 -40, 0 -90 C18 -40, 12 20, 14 80 Z" fill="#5D4037" />
+    
+    <!-- Tree Roots -->
+    <path d="M-14 80 C-30 110, -60 130, -90 140 M-10 80 C-20 110, -40 135, -50 145 M14 80 C30 110, 60 130, 90 140 M10 80 C20 110, 40 135, 50 145" 
+          stroke="#5D4037" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.8"/>
+
+    <!-- Foliage Main Canopy Circles -->
+    <circle cx="0" cy="-140" r="85" fill="url(#treeGrad)" opacity="0.95" />
+    <circle cx="-65" cy="-110" r="65" fill="url(#treeGrad)" opacity="0.9" />
+    <circle cx="65" cy="-110" r="65" fill="url(#treeGrad)" opacity="0.9" />
+    <circle cx="-40" cy="-175" r="55" fill="url(#treeGrad)" opacity="0.9" />
+    <circle cx="40" cy="-175" r="55" fill="url(#treeGrad)" opacity="0.9" />
+
+    <!-- Foliage Leaf Details -->
+    <circle cx="-25" cy="-130" r="8" fill="#E0A838" />
+    <circle cx="35" cy="-110" r="8" fill="#E0A838" />
+    <circle cx="0" cy="-175" r="8" fill="#E0A838" />
+    <circle cx="-50" cy="-160" r="7" fill="#81C784" />
+    <circle cx="50" cy="-150" r="7" fill="#81C784" />
+
+    <!-- Circular Icon Overlay Badges on Tree -->
+    <!-- Ladybird Icon Circle -->
+    <g transform="translate(-100, -80)">
+      <circle r="26" fill="#FFFFFF" stroke="#27AE60" stroke-width="3" filter="url(#shadow)"/>
+      <text x="-12" y="8" font-size="22">🐞</text>
+    </g>
+
+    <!-- Solar Trap Icon Circle -->
+    <g transform="translate(100, -80)">
+      <circle r="26" fill="#FFFFFF" stroke="#E0A838" stroke-width="3" filter="url(#shadow)"/>
+      <text x="-12" y="8" font-size="22">☀️</text>
+    </g>
+
+    <!-- Lab Testing Icon Circle -->
+    <g transform="translate(0, 0)">
+      <circle r="28" fill="#FFFFFF" stroke="#27AE60" stroke-width="3" filter="url(#shadow)"/>
+      <text x="-13" y="9" font-size="24">🔬</text>
+    </g>
+  </g>
+
+  <!-- CONNECTING POINTER LINES & 5 MINIMAL NODE CALLOUTS -->
+
+  <!-- NODE 1: IDENTIFY & MONITOR (Top Left) -->
+  <g transform="translate(60, 200)">
+    <path d="M 230 20 L 300 20 L 330 180" stroke="#27AE60" stroke-width="2.5" stroke-dasharray="4,4" fill="none"/>
+    <rect x="0" y="0" width="220" height="64" rx="16" fill="#FFFFFF" stroke="#27AE60" stroke-width="2" filter="url(#shadow)"/>
+    <circle cx="32" cy="32" r="18" fill="#27AE60" filter="url(#badgeShadow)"/>
+    <text x="32" y="38" font-family="'Outfit', sans-serif" font-size="16" font-weight="900" fill="#FFFFFF" text-anchor="middle">1</text>
+    <text x="62" y="28" font-family="'Outfit', sans-serif" font-size="13" font-weight="800" fill="#1C2C23">IDENTIFY &amp; MONITOR</text>
+    <text x="62" y="46" font-family="'Outfit', sans-serif" font-size="11" font-weight="500" fill="#1C2C23" opacity="0.7">Track pest cycles &amp; beneficials</text>
+  </g>
+
+  <!-- NODE 2: EVALUATE (Mid Left) -->
+  <g transform="translate(60, 340)">
+    <path d="M 220 20 L 320 20 L 350 40" stroke="#E0A838" stroke-width="2.5" stroke-dasharray="4,4" fill="none"/>
+    <rect x="0" y="0" width="210" height="64" rx="16" fill="#FFFFFF" stroke="#E0A838" stroke-width="2" filter="url(#shadow)"/>
+    <circle cx="32" cy="32" r="18" fill="#E0A838" filter="url(#badgeShadow)"/>
+    <text x="32" y="38" font-family="'Outfit', sans-serif" font-size="16" font-weight="900" fill="#1C2C23" text-anchor="middle">2</text>
+    <text x="62" y="28" font-family="'Outfit', sans-serif" font-size="13" font-weight="800" fill="#1C2C23">EVALUATE</text>
+    <text x="62" y="46" font-family="'Outfit', sans-serif" font-size="11" font-weight="500" fill="#1C2C23" opacity="0.7">Economic threshold limits</text>
+  </g>
+
+  <!-- NODE 3: PREVENT (Top Right) -->
+  <g transform="translate(620, 200)">
+    <path d="M -10 20 L -80 20 L -120 180" stroke="#27AE60" stroke-width="2.5" stroke-dasharray="4,4" fill="none"/>
+    <rect x="0" y="0" width="220" height="64" rx="16" fill="#FFFFFF" stroke="#27AE60" stroke-width="2" filter="url(#shadow)"/>
+    <circle cx="32" cy="32" r="18" fill="#27AE60" filter="url(#badgeShadow)"/>
+    <text x="32" y="38" font-family="'Outfit', sans-serif" font-size="16" font-weight="900" fill="#FFFFFF" text-anchor="middle">3</text>
+    <text x="62" y="28" font-family="'Outfit', sans-serif" font-size="13" font-weight="800" fill="#1C2C23">PREVENT</text>
+    <text x="62" y="46" font-family="'Outfit', sans-serif" font-size="11" font-weight="500" fill="#1C2C23" opacity="0.7">Soil bio-priming &amp; rotation</text>
+  </g>
+
+  <!-- NODE 4: ACTION (Mid Right) -->
+  <g transform="translate(620, 340)">
+    <path d="M -10 20 L -70 20 L -100 0" stroke="#E0A838" stroke-width="2.5" stroke-dasharray="4,4" fill="none"/>
+    <rect x="0" y="0" width="210" height="64" rx="16" fill="#FFFFFF" stroke="#E0A838" stroke-width="2" filter="url(#shadow)"/>
+    <circle cx="32" cy="32" r="18" fill="#E0A838" filter="url(#badgeShadow)"/>
+    <text x="32" y="38" font-family="'Outfit', sans-serif" font-size="16" font-weight="900" fill="#1C2C23" text-anchor="middle">4</text>
+    <text x="62" y="28" font-family="'Outfit', sans-serif" font-size="13" font-weight="800" fill="#1C2C23">ACTION</text>
+    <text x="62" y="46" font-family="'Outfit', sans-serif" font-size="11" font-weight="500" fill="#1C2C23" opacity="0.7">Ladybirds &amp; solar traps</text>
+  </g>
+
+  <!-- NODE 5: VERIFY & SCREEN (Bottom Center) -->
+  <g transform="translate(290, 490)">
+    <path d="M 160 0 L 160 -100" stroke="#27AE60" stroke-width="2.5" stroke-dasharray="4,4" fill="none"/>
+    <rect x="0" y="0" width="320" height="64" rx="16" fill="#FFFFFF" stroke="#27AE60" stroke-width="2" filter="url(#shadow)"/>
+    <circle cx="32" cy="32" r="18" fill="#27AE60" filter="url(#badgeShadow)"/>
+    <text x="32" y="38" font-family="'Outfit', sans-serif" font-size="16" font-weight="900" fill="#FFFFFF" text-anchor="middle">5</text>
+    <text x="62" y="28" font-family="'Outfit', sans-serif" font-size="13" font-weight="800" fill="#1C2C23">VERIFY &amp; SCREEN</text>
+    <text x="62" y="46" font-family="'Outfit', sans-serif" font-size="11" font-weight="500" fill="#27AE60">GC-MS testing for 0.00% pesticide residue</text>
+  </g>
+
+  <!-- BOTTOM DIVIDER LINE & PRACTICED AT FOOTER -->
+  <line x1="50" y1="590" x2="850" y2="590" stroke="#1C2C23" stroke-opacity="0.12" stroke-width="1.5" />
+
+  <g transform="translate(60, 630)">
+    <text x="0" y="0" font-family="'Outfit', sans-serif" font-size="12" font-weight="900" fill="#27AE60" letter-spacing="1">PRACTICED AT:</text>
+    
+    <g transform="translate(180, -12)">
+      <text x="0" y="12" font-family="'Outfit', sans-serif" font-size="13" font-weight="700" fill="#1C2C23">🚜 Unjha Farms</text>
+      <text x="140" y="12" font-family="'Outfit', sans-serif" font-size="13" font-weight="700" fill="#1C2C23">•</text>
+      <text x="170" y="12" font-family="'Outfit', sans-serif" font-size="13" font-weight="700" fill="#1C2C23">🌱 Processing Hubs</text>
+      <text x="320" y="12" font-family="'Outfit', sans-serif" font-size="13" font-weight="700" fill="#1C2C23">•</text>
+      <text x="350" y="12" font-family="'Outfit', sans-serif" font-size="13" font-weight="700" fill="#1C2C23">📦 Global Freight</text>
+    </g>
+  </g>
+
+</svg>

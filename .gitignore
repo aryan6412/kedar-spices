@@ -1,0 +1,12 @@
+node_modules/
+.vscode/
+cloudflared.exe
+*.log
+*.sqlite
+scratch/
+.env
+.vercel
+*.rar
+*.zip
+*.7z
+*.tar.gz

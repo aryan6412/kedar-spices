@@ -1,0 +1,20 @@
+{
+  "name": "kedar-spices",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./css/tailwind.css --minify",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./css/tailwind.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "localtunnel": "^2.0.2",
+    "tailwindcss": "^3.4.15",
+    "tunnelmole": "^2.4.0"
+  }
+}

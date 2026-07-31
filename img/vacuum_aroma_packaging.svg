@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgStage5" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1C2C23" />
+      <stop offset="60%" stop-color="#2E5E43" />
+      <stop offset="100%" stop-color="#1C2C23" />
+    </linearGradient>
+
+    <linearGradient id="bagGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ECEFF1" />
+      <stop offset="100%" stop-color="#CFD8DC" />
+    </linearGradient>
+
+    <filter id="glow5" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#27AE60" flood-opacity="0.6"/>
+    </filter>
+
+    <filter id="shadow5" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bgStage5)" />
+
+  <!-- VACUUM SEALED PACKAGING & GLOBAL CARGO SHIP GRAPHICS (CENTER) -->
+  <g transform="translate(400, 230)">
+    
+    <!-- Vacuum Sealed Spice Bag (Left Center) -->
+    <g transform="translate(-140, 0)">
+      <rect x="-80" y="-120" width="160" height="220" rx="16" fill="url(#bagGrad)" stroke="#B0BEC5" stroke-width="3" filter="url(#shadow5)"/>
+      <rect x="-70" y="-110" width="140" height="40" fill="#27AE60" rx="8" />
+      <text x="0" y="-85" font-family="'Playfair Display', Georgia, serif" font-size="15" font-weight="800" fill="#FFFFFF" text-anchor="middle">KEDARNATH</text>
+      <text x="0" y="-73" font-family="'Outfit', sans-serif" font-size="8" font-weight="700" fill="#E0A838" text-anchor="middle" letter-spacing="1">VACUUM AROMA LOCK</text>
+
+      <!-- Golden Seed Graphic Overlay on Bag -->
+      <circle cx="0" cy="0" r="35" fill="#27AE60" fill-opacity="0.1" stroke="#27AE60" stroke-width="2" stroke-dasharray="4,4"/>
+      <text x="0" y="10" font-size="32" text-anchor="middle">🌿</text>
+
+      <!-- QR Code Batch Traceability Stamp -->
+      <rect x="-60" y="55" width="40" height="35" rx="4" fill="#1C2C23" />
+      <!-- Simulated QR Pattern -->
+      <rect x="-54" y="61" width="10" height="10" fill="#FFFFFF"/>
+      <rect x="-36" y="61" width="10" height="10" fill="#FFFFFF"/>
+      <rect x="-54" y="75" width="10" height="10" fill="#FFFFFF"/>
+      <rect x="-36" y="75" width="8" height="8" fill="#27AE60"/>
+      <text x="2" y="78" font-family="'Outfit', sans-serif" font-size="9" font-weight="800" fill="#1C2C23">QR TRACE</text>
+    </g>
+
+    <!-- Global Cargo Ship Freight Graphic (Right Center) -->
+    <g transform="translate(140, 30)">
+      <!-- Ship Hull -->
+      <path d="M-120 40 L120 40 L90 80 L-90 80 Z" fill="#37474F" stroke="#263238" stroke-width="2" filter="url(#shadow5)"/>
+      
+      <!-- Containers on Deck -->
+      <rect x="-80" y="-10" width="45" height="50" rx="4" fill="#27AE60" stroke="#FFFFFF" stroke-width="1.5"/>
+      <text x="-58" y="20" font-family="'Outfit', sans-serif" font-size="14" font-weight="900" fill="#FFFFFF" text-anchor="middle">EU</text>
+
+      <rect x="-30" y="-10" width="45" height="50" rx="4" fill="#E0A838" stroke="#FFFFFF" stroke-width="1.5"/>
+      <text x="-8" y="20" font-family="'Outfit', sans-serif" font-size="14" font-weight="900" fill="#1C2C23" text-anchor="middle">US</text>
+
+      <rect x="20" y="-10" width="45" height="50" rx="4" fill="#1976D2" stroke="#FFFFFF" stroke-width="1.5"/>
+      <text x="42" y="20" font-family="'Outfit', sans-serif" font-size="14" font-weight="900" fill="#FFFFFF" text-anchor="middle">UK</text>
+
+      <!-- Ocean Wave Lines -->
+      <path d="M-140 85 Q-100 75, -60 85 T20 85 T100 85 T160 85" stroke="#81C784" stroke-width="3" fill="none" opacity="0.8"/>
+    </g>
+
+  </g>
+
+  <!-- FLOATING BADGES -->
+  <!-- Badge 1: Vacuum Packaging -->
+  <g transform="translate(50, 40)">
+    <rect width="250" height="52" rx="16" fill="#FFFFFF" fill-opacity="0.15" stroke="#FFFFFF" stroke-width="1.5" style="backdrop-filter: blur(10px);" />
+    <circle cx="30" cy="26" r="16" fill="#27AE60" />
+    <text x="30" y="32" font-size="16" text-anchor="middle">📦</text>
+    <text x="56" y="24" font-family="'Outfit', sans-serif" font-size="12" font-weight="800" fill="#FFFFFF">VACUUM AROMA LOCK</text>
+    <text x="56" y="38" font-family="'Outfit', sans-serif" font-size="10" font-weight="500" fill="#81C784">Multi-Wall Barrier Packaging</text>
+  </g>
+
+  <!-- Badge 2: Global Shipping -->
+  <g transform="translate(500, 40)">
+    <rect width="250" height="52" rx="16" fill="#FFFFFF" fill-opacity="0.15" stroke="#FFFFFF" stroke-width="1.5" style="backdrop-filter: blur(10px);" />
+    <circle cx="30" cy="26" r="16" fill="#E0A838" />
+    <text x="30" y="32" font-size="16" text-anchor="middle">🚢</text>
+    <text x="56" y="24" font-family="'Outfit', sans-serif" font-size="12" font-weight="800" fill="#FFFFFF">BATCH QR TRACEABILITY</text>
+    <text x="56" y="38" font-family="'Outfit', sans-serif" font-size="10" font-weight="500" fill="#F39C12">Direct Export from Unjha India</text>
+  </g>
+
+  <!-- CENTER LOCATION BANNER -->
+  <g transform="translate(240, 430)">
+    <rect width="320" height="44" rx="22" fill="#1C2C23" fill-opacity="0.9" stroke="#27AE60" stroke-width="2" filter="url(#shadow5)"/>
+    <text x="160" y="27" font-family="'Outfit', sans-serif" font-size="13" font-weight="800" fill="#81C784" text-anchor="middle" letter-spacing="1">
+      🌍 STAGE 05 • GLOBAL FREIGHT DELIVERY
+    </text>
+  </g>
+</svg>

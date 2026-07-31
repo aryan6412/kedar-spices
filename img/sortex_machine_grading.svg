@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgStage3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1C2C23" />
+      <stop offset="60%" stop-color="#2E4033" />
+      <stop offset="100%" stop-color="#1C2C23" />
+    </linearGradient>
+
+    <linearGradient id="laserGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E74C3C" stop-opacity="0" />
+      <stop offset="50%" stop-color="#FF5252" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#E74C3C" stop-opacity="0" />
+    </linearGradient>
+
+    <filter id="glow3" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#27AE60" flood-opacity="0.6"/>
+    </filter>
+
+    <filter id="shadow3" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bgStage3)" />
+
+  <!-- OPTICAL SORTEX MACHINE SCHEMATIC GRAPHIC (CENTER) -->
+  <g transform="translate(400, 240)">
+    
+    <!-- Machine Outer Frame -->
+    <rect x="-180" y="-160" width="360" height="300" rx="24" fill="#263238" stroke="#37474F" stroke-width="4" filter="url(#shadow3)"/>
+    <rect x="-160" y="-140" width="320" height="260" rx="16" fill="#1C2C23" />
+
+    <!-- Top Hopper Funnel (Raw Seeds Entry) -->
+    <path d="M-100 -160 L100 -160 L40 -90 L-40 -90 Z" fill="#455A64" stroke="#78909C" stroke-width="2"/>
+    <text x="0" y="-120" font-family="'Outfit', sans-serif" font-size="11" font-weight="800" fill="#ECEFF1" text-anchor="middle">RAW SEED HOPPER</text>
+
+    <!-- Falling Golden Seeds Stream -->
+    <circle cx="-15" cy="-70" r="4" fill="#E0A838" />
+    <circle cx="10" cy="-60" r="5" fill="#E0A838" />
+    <circle cx="-5" cy="-45" r="4.5" fill="#E0A838" />
+    <circle cx="20" cy="-30" r="4" fill="#E0A838" />
+    <circle cx="-18" cy="-15" r="5" fill="#E0A838" />
+    <circle cx="5" cy="0" r="4.5" fill="#E0A838" />
+
+    <!-- Optical Camera Sensors -->
+    <circle cx="-110" cy="-20" r="24" fill="#37474F" stroke="#27AE60" stroke-width="3"/>
+    <circle cx="-110" cy="-20" r="10" fill="#00E676" filter="url(#glow3)"/>
+    
+    <circle cx="110" cy="-20" r="24" fill="#37474F" stroke="#27AE60" stroke-width="3"/>
+    <circle cx="110" cy="-20" r="10" fill="#00E676" filter="url(#glow3)"/>
+
+    <!-- High Speed Red Laser Scanning Beam -->
+    <rect x="-130" y="-22" width="260" height="4" fill="url(#laserGrad)" />
+    <rect x="-130" y="-20" width="260" height="2" fill="#FFFFFF" opacity="0.8"/>
+
+    <!-- Separated Chutes: Pure Seeds vs Defectives -->
+    <path d="M-80 50 L-10 50 L-30 110 L-100 110 Z" fill="#27AE60" opacity="0.9" />
+    <text x="-60" y="85" font-family="'Outfit', sans-serif" font-size="10" font-weight="900" fill="#FFFFFF" text-anchor="middle">PURE 99.5%</text>
+
+    <path d="M10 50 L80 50 L100 110 L30 110 Z" fill="#D32F2F" opacity="0.8" />
+    <text x="65" y="85" font-family="'Outfit', sans-serif" font-size="10" font-weight="900" fill="#FFFFFF" text-anchor="middle">REJECTS</text>
+
+  </g>
+
+  <!-- FLOATING BADGES -->
+  <!-- Badge 1: Laser Sortex -->
+  <g transform="translate(50, 40)">
+    <rect width="250" height="52" rx="16" fill="#FFFFFF" fill-opacity="0.15" stroke="#FFFFFF" stroke-width="1.5" style="backdrop-filter: blur(10px);" />
+    <circle cx="30" cy="26" r="16" fill="#27AE60" />
+    <text x="30" y="32" font-size="16" text-anchor="middle">🔬</text>
+    <text x="56" y="24" font-family="'Outfit', sans-serif" font-size="12" font-weight="800" fill="#FFFFFF">OPTICAL LASER SORTEX</text>
+    <text x="56" y="38" font-family="'Outfit', sans-serif" font-size="10" font-weight="500" fill="#81C784">Color Camera Grain Sorting</text>
+  </g>
+
+  <!-- Badge 2: Purity -->
+  <g transform="translate(500, 40)">
+    <rect width="250" height="52" rx="16" fill="#FFFFFF" fill-opacity="0.15" stroke="#FFFFFF" stroke-width="1.5" style="backdrop-filter: blur(10px);" />
+    <circle cx="30" cy="26" r="16" fill="#E0A838" />
+    <text x="30" y="32" font-size="16" text-anchor="middle">✨</text>
+    <text x="56" y="24" font-family="'Outfit', sans-serif" font-size="12" font-weight="800" fill="#FFFFFF">99.5%+ SEED PURITY</text>
+    <text x="56" y="38" font-family="'Outfit', sans-serif" font-size="10" font-weight="500" fill="#F39C12">Triple Destoning &amp; Magnet</text>
+  </g>
+
+  <!-- CENTER LOCATION BANNER -->
+  <g transform="translate(240, 430)">
+    <rect width="320" height="44" rx="22" fill="#1C2C23" fill-opacity="0.9" stroke="#27AE60" stroke-width="2" filter="url(#shadow3)"/>
+    <text x="160" y="27" font-family="'Outfit', sans-serif" font-size="13" font-weight="800" fill="#27AE60" text-anchor="middle" letter-spacing="1">
+      ⚙️ STAGE 03 • OPTICAL SORTEX GRADING
+    </text>
+  </g>
+</svg>
