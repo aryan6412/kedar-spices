@@ -1,10 +1,10 @@
 <?php
-// Database configuration - Supports Railway Cloud MySQL & Local Development
-$host = getenv('MYSQLHOST') ?: getenv('MYSQL_HOST') ?: '127.0.0.1';
-$port = getenv('MYSQLPORT') ?: getenv('MYSQL_PORT') ?: '3307';
-$db   = getenv('MYSQLDATABASE') ?: getenv('MYSQL_DATABASE') ?: 'kedar_spices';
-$user = getenv('MYSQLUSER') ?: getenv('MYSQL_USER') ?: 'root';
-$pass = getenv('MYSQLPASSWORD') ?: getenv('MYSQL_PASSWORD') ?: 'Ary@n1104';
+// Database configuration - Supports Railway Cloud MySQL, Vercel & Local Dev
+$host = getenv('MYSQLHOST') ?: getenv('MYSQL_HOST') ?: $_ENV['MYSQLHOST'] ?? $_ENV['MYSQL_HOST'] ?? $_SERVER['MYSQLHOST'] ?? $_SERVER['MYSQL_HOST'] ?? '127.0.0.1';
+$port = getenv('MYSQLPORT') ?: getenv('MYSQL_PORT') ?: $_ENV['MYSQLPORT'] ?? $_ENV['MYSQL_PORT'] ?? $_SERVER['MYSQLPORT'] ?? $_SERVER['MYSQL_PORT'] ?? '3307';
+$db   = getenv('MYSQLDATABASE') ?: getenv('MYSQL_DATABASE') ?: $_ENV['MYSQLDATABASE'] ?? $_ENV['MYSQL_DATABASE'] ?? $_SERVER['MYSQLDATABASE'] ?? $_SERVER['MYSQL_DATABASE'] ?? 'kedar_spices';
+$user = getenv('MYSQLUSER') ?: getenv('MYSQL_USER') ?: $_ENV['MYSQLUSER'] ?? $_ENV['MYSQL_USER'] ?? $_SERVER['MYSQLUSER'] ?? $_SERVER['MYSQL_USER'] ?? 'root';
+$pass = getenv('MYSQLPASSWORD') ?: getenv('MYSQL_PASSWORD') ?: $_ENV['MYSQLPASSWORD'] ?? $_ENV['MYSQL_PASSWORD'] ?? $_SERVER['MYSQLPASSWORD'] ?? $_SERVER['MYSQL_PASSWORD'] ?? 'Ary@n1104';
 $charset = 'utf8mb4';
 
 $options = [
