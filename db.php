@@ -37,17 +37,22 @@ if (!$pdo) {
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
         $is_sqlite = true;
-    } catch (\PDOException $e) {
-        die("Database connection failed: " . $e->getMessage());
+    } catch (\Throwable $e) {
+        $pdo = null;
     }
 }
 
 // Bootstrap Database and Tables
-try {
-    if (!$is_sqlite) {
-        $pdo->exec("CREATE DATABASE IF NOT EXISTS `$db` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
-        $pdo->exec("USE `$db`");
+if ($pdo) {
+    try {
+        if (!$is_sqlite) {
+            $pdo->exec("CREATE DATABASE IF NOT EXISTS `$db` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
+            $pdo->exec("USE `$db`");
+        }
+    } catch (\Throwable $e) {
+        // Silently continue if database creation fails
     }
+}
     
     // Check if table needs upgrade
     $table_check = $pdo->query("SHOW TABLES LIKE 'hero_config'");
@@ -421,8 +426,8 @@ try {
             $ins_testi->execute([$t['name'], $t['role'], $t['location'], $t['avatar'], $t['badge_type'], $t['rating'], $t['comment']]);
         }
     }
-} catch (\PDOException $e) {
-    die("Database initialization failed: " . $e->getMessage());
+} catch (\Throwable $e) {
+    $pdo = null;
 }
 
 /**
