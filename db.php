@@ -1,9 +1,10 @@
 <?php
-// Database configuration
-$host = '127.0.0.1';
-$port = '3307';
-$db   = 'kedar_spices';
-$pass = 'Ary@n1104';
+// Database configuration - Supports Railway Cloud MySQL & Local Development
+$host = getenv('MYSQLHOST') ?: getenv('MYSQL_HOST') ?: '127.0.0.1';
+$port = getenv('MYSQLPORT') ?: getenv('MYSQL_PORT') ?: '3307';
+$db   = getenv('MYSQLDATABASE') ?: getenv('MYSQL_DATABASE') ?: 'kedar_spices';
+$user = getenv('MYSQLUSER') ?: getenv('MYSQL_USER') ?: 'root';
+$pass = getenv('MYSQLPASSWORD') ?: getenv('MYSQL_PASSWORD') ?: 'Ary@n1104';
 $charset = 'utf8mb4';
 
 $options = [
