@@ -1,7 +1,7 @@
 {
   "version": 2,
   "functions": {
-    "*.php": {
+    "api/index.php": {
       "runtime": "vercel-php@0.7.3"
     }
   },
@@ -19,24 +19,8 @@
       "dest": "/uploads/$1"
     },
     {
-      "src": "/about",
-      "dest": "/about.php"
-    },
-    {
-      "src": "/products",
-      "dest": "/products.php"
-    },
-    {
-      "src": "/contact",
-      "dest": "/contact.php"
-    },
-    {
-      "src": "/admin",
-      "dest": "/admin.php"
-    },
-    {
       "src": "/(.*)",
-      "dest": "/$1"
+      "dest": "/api/index.php"
     }
   ]
 }
